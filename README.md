@@ -1,7 +1,5 @@
 # Shash
 ### A no-nonsense golang package for creating random string
-------------------------------------------------------------
-[![GoDoc](https://godoc.org/github.com/JesusIslam/shash?status.svg)](https://godoc.org/github.com/JesusIslam/shash)
 
 This package is very simple, just do
 
@@ -22,6 +20,13 @@ This package is very simple, just do
 
 The example will generate a base62 random string with length of 5 (default).
 
+For the documentation see [here](http://godoc.org/github.com/JesusIslam/shash).
+
 To test, just run `go test` in the test directory.
 
 To install `go get github.com/JesusIslam/shash`.
+
+### Benchmark
+On i3-3217U @1.8GHz with `go test -bench . -benchtime=5s -cpu 4`
+
+`BenchmarkGenerate-4       300000             29516 ns/op`

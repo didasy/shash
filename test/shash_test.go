@@ -14,7 +14,7 @@ func TestGenerate(t *testing.T) {
 		t.Fatal(err)
 	}
 	if len(r) != 5 {
-		t.FailNow()
+		t.Fatal("Generated string length is not 5")
 	}
 }
 

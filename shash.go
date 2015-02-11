@@ -12,12 +12,12 @@ import (
 	"crypto/rand"
 	"errors"
 	"math/big"
-	"strings"
 )
 
 // The base62 charset as const CHARSET.
 const (
 	CHARSET = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+	VERSION = "0.0.2"
 )
 
 // Hash only has one property: Length, with default value of 5 on creation.
@@ -41,15 +41,14 @@ func (h *Hash) SetLength(i int) error {
 
 // Generate() will return a random string in base62. Error will return if there is an error with the crypto/rand package, nil if there isn't any error.
 func (h *Hash) Generate() (string, error) {
-	gen := make([]string, h.Length)
-	l := len(CHARSET) - 1
+	var gen []rune
+	l := big.NewInt(int64(len(CHARSET) - 1))
 	for i := 0; i < h.Length; i++ {
-		r, err := rand.Int(rand.Reader, big.NewInt(int64(l)))
+		r, err := rand.Int(rand.Reader, l)
 		if err != nil {
 			return "", err
 		}
-		x := string(CHARSET[r.Uint64()])
-		gen = append(gen, x)
+		gen = append(gen, rune(CHARSET[r.Uint64()]))
 	}
-	return strings.Join(gen, ""), nil
+	return string(gen), nil
 }
