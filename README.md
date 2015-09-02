@@ -22,7 +22,7 @@ The example will generate a base62 random string with length of 5 (default).
 
 For the documentation see [here](http://godoc.org/github.com/JesusIslam/shash).
 
-To test, just run `go test` in the test directory.
+To test, just run `go test`, but you need to have [gomega](http://github.com/onsi/gomega) and [ginkgo](http://github.com/onsi/ginkgo) installed.
 
 To install `go get github.com/JesusIslam/shash`.
 
