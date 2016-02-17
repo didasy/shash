@@ -41,14 +41,14 @@ func (h *Hash) SetLength(i int) error {
 
 // Generate() will return a random string in base62. Error will return if there is an error with the crypto/rand package, nil if there isn't any error.
 func (h *Hash) Generate() (string, error) {
-	var gen []rune
+	var gen = make([]rune, h.Length)
 	l := big.NewInt(int64(len(CHARSET) - 1))
 	for i := 0; i < h.Length; i++ {
 		r, err := rand.Int(rand.Reader, l)
 		if err != nil {
 			return "", err
 		}
-		gen = append(gen, rune(CHARSET[r.Uint64()]))
+		gen[i] = rune(CHARSET[r.Uint64()])
 	}
 	return string(gen), nil
 }
