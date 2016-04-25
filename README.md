@@ -1,3 +1,6 @@
+![Build Status](https://travis-ci.org/JesusIslam/shash.svg)
+[![GoDoc](https://godoc.org/github.com/JesusIslam/shash?status.svg)](https://godoc.org/github.com/JesusIslam/shash)
+
 # Shash
 ### A no-nonsense golang package for creating random string
 
