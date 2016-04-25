@@ -1,4 +1,4 @@
-![Build Status](https://travis-ci.org/JesusIslam/shash.svg)
+[![Build Status](https://travis-ci.org/JesusIslam/shash.svg?branch=master)](https://travis-ci.org/JesusIslam/shash)
 [![GoDoc](https://godoc.org/github.com/JesusIslam/shash?status.svg)](https://godoc.org/github.com/JesusIslam/shash)
 
 # Shash
