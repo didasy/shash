@@ -10,3 +10,7 @@ go:
 
 script:
  - go test -v ./...
+
+install:
+  - go get "github.com/onsi/ginkgo"
+  - go get "github.com/onsi/gomega"
