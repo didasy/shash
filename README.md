@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/JesusIslam/shash.svg?branch=master)](https://travis-ci.org/JesusIslam/shash)
+[![Coverage Status](https://coveralls.io/repos/github/JesusIslam/shash/badge.svg?branch=master)](https://coveralls.io/github/JesusIslam/shash?branch=master)
 [![GoDoc](https://godoc.org/github.com/JesusIslam/shash?status.svg)](https://godoc.org/github.com/JesusIslam/shash)
 
 # Shash
