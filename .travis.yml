@@ -8,9 +8,12 @@ go:
  - release
  - tip
 
+before_script:
+ - go vet ./...
+
 script:
  - go test -v ./...
 
 install:
-  - go get "github.com/onsi/ginkgo"
-  - go get "github.com/onsi/gomega"
+ - go get "github.com/onsi/ginkgo"
+ - go get "github.com/onsi/gomega"
