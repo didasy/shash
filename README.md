@@ -33,4 +33,7 @@ To install `go get github.com/JesusIslam/shash`.
 ### Benchmark
 On i3-3217U @1.8GHz with `go test -bench . -benchtime=5s -cpu 4`
 
-`BenchmarkGenerate-4      500000         15230 ns/op`
+```
+BenchmarkGenerate5-4 	  500000	     15130 ns/op
+BenchmarkGenerate16-4	  200000	     48357 ns/op
+BenchmarkGenerate32-4	  100000	     98319 ns/op```
