@@ -16,7 +16,7 @@ This package is very simple, just do
 	)
 
 	func main() {
-		h := shash.New()
+		h := shash.New(10)
 		r, _ := h.Generate()
 		fmt.Println(r)
 	}
@@ -33,4 +33,4 @@ To install `go get github.com/JesusIslam/shash`.
 ### Benchmark
 On i3-3217U @1.8GHz with `go test -bench . -benchtime=5s -cpu 4`
 
-`BenchmarkGenerate-4       300000             29516 ns/op`
+`BenchmarkGenerate-4      500000         15230 ns/op`
